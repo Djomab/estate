@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- Title view -->
+    <record id="estate_property_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Properties list -->
+    <record id="estate_property_tree" model="ir.ui.view">
+        <field name="name">Properties</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" string="Libellé"/>
+                <field name="bedrooms" string="Nbr chambres"/>
+                <field name="living_area" string="Nbr salons"/>
+                <field name="expected_price" string="Prix attendu"/>
+                <field name="selling_price" string="Prix de vente"/>
+                <field name="date_availability" string="Disponible le"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Properties form view -->
+    <record id="estate_property_form" model="ir.ui.view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <field name="name"/>
+                    <group>
+                        <group>
+                            <field name="postcode" string="Boite postale"/>
+                            <field name="date_availability" string="Disponible le"/>
+                        </group>
+                        <group>
+                            <field name="expected_price" string="Prix attendu"/>
+                            <field name="selling_price" string="Prix de vente"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Description" >
+                            <group>
+                                <field name="description" string="Description"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

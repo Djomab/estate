@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Real EState Module menu -->
+    <menuitem id="estate_menu_root" name="IMMOBILIER" sequence="100">
+        <!-- To Properties menu item -->
+        <menuitem id="estate_first_level_menu" name="Annonces">
+            <menuitem id="estate_property_menu_action" action="estate_property_action"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>

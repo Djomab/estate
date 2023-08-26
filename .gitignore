@@ -1,0 +1,9 @@
+# dotfiles
+.*
+!.editorconfig
+!.gitignore
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+# compiled python files
+*.py[cod]
