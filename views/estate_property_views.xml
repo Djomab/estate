@@ -31,7 +31,9 @@
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
-                    <field name="name"/>
+                    <div class="oe_title">
+                        <h1><field class="text-break" name="name" required="1"/></h1>
+                    </div>
                     <group>
                         <group>
                             <field name="postcode" string="Boite postale"/>
@@ -47,12 +49,40 @@
                         <page string="Description" >
                             <group>
                                 <field name="description" string="Description"/>
+                                <field name="bedrooms" string="Nbr chambres"/>
+                                <field name="living_area" string="Nbr salons"/>
+                                <field name="facades" string="Façades"/>
+                                <field name="garage" string="Garage"/>
+                                <field name="garden" string="Jardin"/>
+                                <field name="garden_area" string="Jardin superficie"/>
+                                <field name="garden_orientation" string="Orientation du Jardin"/>
+                                <field name="state" string="Disponibilité"/>
                             </group>
                         </page>
                     </notebook>
-                    
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Properties search configuration -->
+    <record id="estate_property_search" model="ir.ui.view">
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Rechercher un bien">
+                <field name="name" string="Libellé"/>
+                <field name="postcode" string="Boite postale"/>
+                <field name="expected_price" string="Prix attendu"/>
+                <field name="bedrooms" string="Nombre de chambres"/>
+                <field name="living_area" string="Nombre de salons"/>
+                <field name="facades" string="Façades"/>
+                
+                <filter string="Disponible" name="state" domain="['|', ('state', '=', 'new'), ('state', '=', 'offer recieved')]"/>
+                <group string="Grouper par">
+                    <filter string="Boite postale" name="postcode" context="{'group_by': 'postcode', }"/>
+                </group>                
+            </search>
         </field>
     </record>
 </odoo>
