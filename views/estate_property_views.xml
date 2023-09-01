@@ -16,6 +16,7 @@
             <tree string="">
                 <field name="name" string="Libellé"/>
                 <field name="bedrooms" string="Nbr chambres"/>
+                <field name="property_type_id" string="Type de propriété"/>
                 <field name="living_area" string="Nbr salons"/>
                 <field name="expected_price" string="Prix attendu"/>
                 <field name="selling_price" string="Prix de vente"/>
@@ -36,6 +37,7 @@
                     </div>
                     <group>
                         <group>
+                            <field name="property_type_id" string="Type de propriété"/>
                             <field name="postcode" string="Boite postale"/>
                             <field name="date_availability" string="Disponible le"/>
                         </group>

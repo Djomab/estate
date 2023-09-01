@@ -7,6 +7,11 @@
         <menuitem id="estate_first_level_menu" name="Annonces">
             <menuitem id="estate_property_menu_action" action="estate_property_action"/>
         </menuitem>
+        
+        <!-- To Settings menu item -->
+        <menuitem id="estate_type_first_level_menu" name="Paramètres">
+            <menuitem id="estate_property_type_menu_action" name="Types de propriété" action="estate_property_type_action"/>
+        </menuitem>
     </menuitem>
 
 </odoo>
