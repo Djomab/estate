@@ -61,6 +61,12 @@
                                 <field name="state" string="Disponibilité"/>
                             </group>
                         </page>
+                        <page string="Autres infos" >
+                            <group>
+                                <field name="seller_id" string="Vendeur"/>
+                                <field name="buyer_id" string="Acheteur"/>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
