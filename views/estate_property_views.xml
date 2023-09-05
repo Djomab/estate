@@ -64,6 +64,15 @@
                                 <field name="state" string="Disponibilité"/>
                             </group>
                         </page>
+                        <page string="Offres" >
+                            <field name="offer_ids" attrs="{'readonly':['|',('state','=','sold'),('state','=','canceled')]}">
+                                    <tree string="Estate Offer" editable="1" decoration-danger="status=='refused'" decoration-success="status=='accepted'">
+                                        <field name="price" style="width:35% !important"/>
+                                        <field name="partner_id" style="width:35%"/>
+                                        <field name="status" style="width:30%"/>
+                                    </tree>
+                            </field>
+                        </page>
                         <page string="Autres infos" >
                             <group>
                                 <field name="seller_id" string="Vendeur"/>
