@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!--Property offer tree view-->
+    <record id="estate_property_offer_tree" model="ir.ui.view">
+        <field name="name">estate_property_offer.tree</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="price" string="Prix"/>
+                <field name="partner_id" string="Partner"/>
+                <field name="status" string="Statut"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!--Property offer form view-->
+    <record id="estate_property_offer_form" model="ir.ui.view">
+        <field name="name">estate_property_offer.form</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <field name="price" string="Prix"/>
+                    <field name="partner_id" string="Partner"/>
+                    <field name="status" string="Statut"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
